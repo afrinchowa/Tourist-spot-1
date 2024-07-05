@@ -1,8 +1,22 @@
 const AddItem = () => {
+  const handleSpot = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const spotName = form.spotName.value;
+    const countryName = form.countryName.value;
+    const location = form.location.value;
+    const shortDescription = form.shortDescription.value;
+    const averageCost = form.averageCost.value;
+    const seasonality = form.seasonality.value;
+    const img = form.img.value;
+    const travelTime = form.seasonality.value;
+    const newSpot ={spotName,countryName,location,shortDescription,averageCost,seasonality,img,travelTime}
+    console.log(newSpot);
+  };
   return (
     <div className="bg-[#C3D898] text-[#70161E] p-24">
       <h2 className="text-3xl font-extrabold">Add spot</h2>
-      <form>
+      <form onSubmit={handleSpot}>
         <div>
           <div className="flex">
             <label className="form-control md:w-1/2 mr-4">
@@ -60,7 +74,8 @@ const AddItem = () => {
               <input
                 type="text"
                 placeholder="Average_cost
-"name="averageCost"
+"
+                name="averageCost"
                 className="input input-bordered w-full "
               />
             </label>
@@ -84,7 +99,8 @@ const AddItem = () => {
               <input
                 type="text"
                 placeholder="Image URL
-" name="img"
+"
+                name="img"
                 className="input input-bordered w-full "
               />
             </label>
@@ -101,7 +117,6 @@ const AddItem = () => {
             </label>
           </div>
 
-          
           <input type="submit" value="add Spot" className="btn btn-block" />
         </div>
       </form>

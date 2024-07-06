@@ -12,6 +12,20 @@ const AddItem = () => {
     const travelTime = form.seasonality.value;
     const newSpot ={spotName,countryName,location,shortDescription,averageCost,seasonality,img,travelTime}
     console.log(newSpot);
+
+
+    // send data to the server
+    fetch('http://localhost:5000/spot',{
+      method:'POST',
+      headers:{
+        'content-type': 'application/json'
+      },
+      body:JSON.stringify(newSpot)
+    } )
+    .then(res=>res.json())
+    .then(data=>{
+      console.log(data);
+    })
   };
   return (
     <div className="bg-[#C3D898] text-[#70161E] p-24">

@@ -1,3 +1,5 @@
+import Swal from "sweetalert2";
+
 const AddItem = () => {
   const handleSpot = (event) => {
     event.preventDefault();
@@ -25,6 +27,15 @@ const AddItem = () => {
     .then(res=>res.json())
     .then(data=>{
       console.log(data);
+      if(data.insertedId){
+        Swal.fire({
+          title: "Good job!",
+          text: "You Entered the spot",
+          icon: "success",
+          timer:1500
+        });
+        
+      }
     })
   };
   return (

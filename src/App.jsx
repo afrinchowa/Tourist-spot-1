@@ -5,7 +5,6 @@ function App() {
  
   return (
     <>
-      
       <h1 className="text-6xl text-red-600">Vite + React</h1>
       <div className="carousel carousel-vertical rounded-box h-96">
   <div className="carousel-item h-full">

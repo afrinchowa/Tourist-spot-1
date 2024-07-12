@@ -10,10 +10,15 @@ const {spotName,countryName,location,shortDescription,averageCost,seasonality,im
           src={img}/>
       </figure>
       <div className="card-body">
-        <h2 className="card-title">New movie is released!</h2>
-        <p>Click the button to watch on Jetflix app.</p>
+        <h2 className="card-title">Spot-Name: {spotName}</h2>
+        <p>Country Name: {countryName}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Watch</button>
+         <div className="">
+
+<button></button>
+<button></button>
+<button></button>
+          </div>
         </div>
       </div>
     </div>

@@ -20,9 +20,10 @@ const {spotName,countryName,location,shortDescription,averageCost,seasonality,im
         <div className="card-actions justify-end">
          <div className="">
 
-<button></button>
-<button></button>
-<button></button>
+<button className="btn btn-circle">View </button>
+<button className="btn btn-circle">Edit </button>
+<button className="btn btn-circle">X </button>
+
           </div>
         </div>
       </div>

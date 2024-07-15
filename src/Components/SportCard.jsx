@@ -1,8 +1,12 @@
 
 
 const SportCard = ({spot}) => {
-const {spotName,countryName,location,shortDescription,averageCost,seasonality,img,travelTime} =spot;
+const {_id,spotName,countryName,location,shortDescription,averageCost,seasonality,img,travelTime} =spot;
 
+
+const handleDelete = _id=>{
+  console.log(_id);
+}
     return (
       <div className="card card-side bg-base-100 shadow-xl">
       <figure>
@@ -22,7 +26,7 @@ const {spotName,countryName,location,shortDescription,averageCost,seasonality,im
 
 <button className="btn btn-circle">View </button>
 <button className="btn btn-circle">Edit </button>
-<button className="btn btn-circle">X </button>
+<button onClick={()=>handleDelete(_id)} className="btn btn-circle bg-red-600">X </button>
 
           </div>
         </div>

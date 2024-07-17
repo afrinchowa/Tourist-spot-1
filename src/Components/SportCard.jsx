@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
@@ -56,7 +57,7 @@ Swal.fire({
          <div className="">
 
 <button className="btn btn-circle">View </button>
-<button className="btn btn-circle">Edit </button>
+<Link to={`updateSpot/${_id}`}><button className="btn btn-circle">Edit </button></Link>
 <button onClick={()=>handleDelete(_id)} className="btn btn-circle bg-red-600">X </button>
 
           </div>

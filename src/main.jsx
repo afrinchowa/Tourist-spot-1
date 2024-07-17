@@ -22,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/updateItem",
     element: <UpdateItem></UpdateItem>,
+    loader: ({params}) => fetch(`http://localhost:5000/spot/${params.id}`)
   },
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(

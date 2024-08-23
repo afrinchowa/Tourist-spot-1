@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import SportCard from "./Components/SportCard";
+// import Tastimonials from "./Components/Tastimonials/Tastimonials";
 import { useState } from "react";
+import Testimonials from "./Components/Testimonial/Testimonials";
 
 function App() {
   const loadedSpots = useLoaderData();
@@ -33,6 +35,7 @@ function App() {
             ></SportCard>
           ))}
         </div>
+    <Testimonials></Testimonials>
       </div>
     </>
   );
